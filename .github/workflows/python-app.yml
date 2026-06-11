@@ -17,14 +17,14 @@ jobs:
       uses: actions/setup-python@v3
     - name: Install dependencies
       run: |
-        py pip install --upgrade pip
+        python pip install --upgrade pip
         pip install -r requirements.txt
     - name: Test with Pytest
       run: |
         pytest
     - name: Lint with Pylint
       run: |
-        pylint ./utilss.py
+        pylint ./utils.py
     - name: Format with Black
       run: |
         black --check .
